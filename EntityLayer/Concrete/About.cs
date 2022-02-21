@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EntityLayer.Concrete
+﻿namespace EntityLayer.Concrete
 {
-    internal class About
+    public class About
     {
+        [Key]
         public int Id { get; set; }
         public string Details1 { get; set; }
         public string Details2 { get; set; }
