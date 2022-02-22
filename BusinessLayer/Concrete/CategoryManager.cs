@@ -28,12 +28,12 @@ namespace BusinessLayer.Concrete
             _categoryDal.Update(category);
         }
 
-        public List<Category> GetAllCategories()
+        public List<Category> GetList()
         {
-            return _categoryDal.GetAll();
+            return _categoryDal.GetListAll();
         }
 
-        public Category GetCategory(int id)
+        public Category GetById(int id)
         {
             return _categoryDal.Get(id);
         }

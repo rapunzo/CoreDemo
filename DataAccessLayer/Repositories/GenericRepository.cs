@@ -30,10 +30,16 @@ namespace DataAccessLayer.Repositories
             return c.Set<T>().Find(id);
         }
 
-        public List<T> GetAll()
+        public List<T> GetListAll()
         {
             using var c = new Context();
             return c.Set<T>().ToList(); 
+        }
+
+        public List<T> GetListAll(System.Linq.Expressions.Expression<Func<T, bool>> filter)
+        {
+            using var c = new Context();
+            return c.Set<T>().Where(filter).ToList();
         }
 
         public void Update(T entity)
