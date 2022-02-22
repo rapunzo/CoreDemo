@@ -8,7 +8,7 @@
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
         public bool Status { get; set; }
-        public int Image { get; set; }
+        public string Image { get; set; }
 
         public virtual int CategoryId { get; set; }        
         public virtual Category Category { get; set; }
