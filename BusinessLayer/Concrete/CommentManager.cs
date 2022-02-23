@@ -17,14 +17,14 @@ namespace BusinessLayer.Concrete
             _commentDal = commentDal;
         }
 
-        public void CommentAdd(Comment Comment)
+        public void CommentAdd(Comment comment)
         {
-            throw new NotImplementedException();
+            _commentDal.Add(comment);
         }
 
         public List<Comment> GetList(int id)
         {
-            return _commentDal.GetListAll(x=>x.BlogId == id);
+            return _commentDal.GetListAll(x => x.BlogId == id);
         }
     }
 }
